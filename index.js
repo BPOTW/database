@@ -1,7 +1,7 @@
 import express from "express"
 import cors from "cors"
 import { connectDB } from "./utils/database.js";
-import router from "./routes/link.js";
+import router from "./routes/Link.js";
 
 const app = express();
 
@@ -16,4 +16,5 @@ app.use('/', router);
 
 app.listen('5050',()=>{
     console.log('Server started successfully: https://localhost:5050')
+
 })
