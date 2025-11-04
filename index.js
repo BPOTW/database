@@ -7,7 +7,8 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-    origin:['database-production-1030.up.railway.app:5000'],
+    origin: "*", // or "https://your-frontend.vercel.app"
+  methods: ["GET", "POST", "PUT", "DELETE"],
 }));
 
 
