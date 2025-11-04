@@ -14,7 +14,7 @@ connectDB();
 app.use('/', router);
 
 
-app.listen('5050',()=>{
+app.listen('5000',()=>{
     console.log('Server started successfully: https://localhost:5050')
 
 })
