@@ -7,7 +7,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-    origin:['http://database-production-f40d.up.railway.app']
+    origin:['http://database-production-f40d.up.railway.app'],
   methods: ["GET", "POST", "PUT", "DELETE"],
 }));
 
