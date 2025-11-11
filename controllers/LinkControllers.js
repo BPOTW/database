@@ -21,13 +21,12 @@ const checkLink = async (req, res) =>{
     if(!linkData){
       console.log('cash miss');
       linkData = await Link.find({ 'generatedLinkId':id });
+      await setCache(id, linkData, 3600);
     }
-      console.log("cash hit");
     if(linkData == ''){
       res.status(404).json({'message':'Id not found'});
       return;
     }
-    await setCache(id, linkData, 3600);
     res.status(200).json(linkData);
   } catch (error) {
     console.log("Error occured");
