@@ -23,6 +23,9 @@ const checkLink = async (req, res) =>{
       linkData = await Link.find({ 'generatedLinkId':id });
       await setCache(id, linkData, 3600);
     }
+    
+    console.log('cash hit');
+
     if(linkData == ''){
       res.status(404).json({'message':'Id not found'});
       return;
