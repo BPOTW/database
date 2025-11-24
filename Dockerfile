@@ -1,14 +1,14 @@
-FROM node:20-alpine
+# FROM node:20-alpine
 
-WORKDIR /app
+# WORKDIR /app
 
-COPY ./package.json .
+# COPY ./package.json .
 
-RUN npm install
+# RUN npm install
 
-COPY . /app/
+# COPY . /app/
 
-RUN npm start
+# RUN npm start
 
 
-# docker buid . -t tinyurl
+# # docker buid . -t tinyurl
